@@ -3,6 +3,7 @@ package com.java.be;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import jakarta.servlet.ServletException;
@@ -28,7 +29,7 @@ public class userServlet extends HttpServlet {
             Connection c = dbConnect.initializeDatabase();
 
             // Execute query
-            String sql = "insert into [USER] (firstName, lastName, doB, poB, sex) values (?, ?, ?, ?, ?)";
+            String sql = "insert into [USER] (firstName, lastName, doB, poB, sex)  values (?, ?, ?, ?, ?)";
             PreparedStatement stm = c.prepareStatement(sql);
 
             stm.setString(1, fName);
@@ -37,7 +38,7 @@ public class userServlet extends HttpServlet {
             stm.setString(4, PoB);
             stm.setString(5, Sex);
 
-            stm.executeUpdate();
+            stm.executeUpdate();            
             stm.close();
             c.close();
 
