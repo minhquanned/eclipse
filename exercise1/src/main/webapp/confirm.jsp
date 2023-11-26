@@ -18,7 +18,19 @@
     <div class="mt-2 p-5 bg-secondary text-white rounded">
 
         <h1>Confirmation</h1>
-        <p>Hello Mr.${user.lastName} ${user.firstName}</p>
+        
+		<%
+		User user = (User) session.getAttribute("user"); 
+		%>
+		
+		<%if(user.getSex() == "Male") { %>
+			<p>Hello Mr.${user.lastName} ${user.firstName}</p> <%; %>
+		<%} else if(user.getSex() == "Female") { %>
+			<p>Hello Mrs.${user.lastName} ${user.firstName}</p> <%; %>
+		<%} else { %>
+			<p>Hello Mr/Mrs.${user.lastName} ${user.firstName}</p> <%; %>
+        <%} %>
+        
         <p>${user.doB}</p>
         <p>${user.poB}</p>
         <p>${user.sex}</p>
@@ -26,7 +38,7 @@
         
         
         <div>
-        	<input type="button" class="btn btn-light" value="edit" onclick="location.href='edit.jsp'">
+        	<input type="button" class="btn btn-light" value="Edit" onclick="location.href='edit.jsp'">
         </div>
         
     </div>

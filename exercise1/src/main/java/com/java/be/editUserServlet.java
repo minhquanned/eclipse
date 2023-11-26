@@ -45,7 +45,7 @@ public class editUserServlet extends HttpServlet {
             String sql = "update [USER] set firstName=?, lastName=?, doB=?, poB=?, sex=? where idUser=?";
             PreparedStatement pstm = c.prepareStatement(sql);
             
-
+            
             pstm.setString(1, fName);
             pstm.setString(2, lName);
             pstm.setString(3, DoB);
@@ -57,11 +57,12 @@ public class editUserServlet extends HttpServlet {
             pstm.close();
             c.close();
             
-            HttpSession seassion = req.getSession();
-            seassion.setAttribute("user", user);
-            seassion.setAttribute("idUser", idUser);
+            HttpSession session = req.getSession();
+            session.setAttribute("user", user);
+            session.setAttribute("idUser", idUser);
             String url = "/confirm.jsp";
             getServletContext().getRequestDispatcher(url).forward(req, res);
+            
 
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
