@@ -24,11 +24,11 @@
 		%>
 		
 		<%if(user.getSex() == "Male") { %>
-			<p>Hello Mr.${user.lastName} ${user.firstName}</p> <%; %>
+			<p>Hello Mr. ${user.lastName} ${user.firstName}</p> <%; %>
 		<%} else if(user.getSex() == "Female") { %>
-			<p>Hello Mrs.${user.lastName} ${user.firstName}</p> <%; %>
+			<p>Hello Mrs. ${user.lastName} ${user.firstName}</p> <%; %>
 		<%} else { %>
-			<p>Hello Mr/Mrs.${user.lastName} ${user.firstName}</p> <%; %>
+			<p>Hello Mr/Mrs. ${user.lastName} ${user.firstName}</p> <%; %>
         <%} %>
         
         <p>${user.doB}</p>
