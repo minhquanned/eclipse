@@ -20,44 +20,31 @@
             <form action="edit" method="post">
                 <div>
                 	<label>First Name:</label>
-	                <input type="text" class="form-control" name="firstName" placeholder="Enter your First Name"><br>
-	                <div>
-	                	<p>Your last choice:</p>
-	                	<p>${user.firstName }</p>
-	                </div>
+	                <input type="text" class="form-control" name="firstName"
+	                placeholder="Enter your First Name" value="${user.firstName }"><br>
 	            </div>
 	            
 	            <div>
 	                <label>Last Name:</label>
-	                <input type="text" class="form-control" name="lastName" placeholder="Enter your Last Name"><br>
-	            	<div>
-	                	<p>Your last choice:</p>
-	                	<p>${user.lastName }</p>
-	                </div>
+	                <input type="text" class="form-control" name="lastName"
+	                placeholder="Enter your Last Name" value="${user.lastName }"><br>
 	            </div>
 	            
 	            <div>
 	                <label>Date of Birth:</label>
-	                <input type="date" class="form-control" name="DoB"><br>
-	                <div>
-	                	<p>Your last choice:</p>
-	                	<p>${user.doB }</p>
-	                </div>
+	                <input type="date" class="form-control" name="DoB"
+	                value="${user.doB }"><br>
 	            </div>
 	                
 	            <div>
 	                <label>Place of Birth:</label>
-	                <select class="form-select" name="PoB" id="PoB" required>
+	                <select class="form-select" name="PoB" id="PoB" selected="${user.poB }" >
 	                    <option value="DN">Đà Nẵng</option>
 	                    <option value="QN">Quảng Nam</option>
 	                    <option value="QT">Quảng Trị</option>
 	                    <option value="H">Huế</option>
 	                    <option value="HP">Hải Phòng</option>
 	                </select><br>
-	                <div>
-	                	<p>Your last choice:</p>
-	                	<p>${user.poB }</p>
-	                </div>
 	            </div>
 	                
 	            <div>
@@ -68,10 +55,7 @@
 	                    <label for="Female">Female</label>
 	                    <input type="radio" id="Other" name="Sex" value="Other">
 	                    <label for="Other">Other</label><br>
-	                 <div>
-	                	<p>Your last choice:</p>
-	                	<p>${user.sex }</p>
-	                </div>
+	                <p class="text-danger">*Remember to check again your gender</p>
 	            </div>
 	                
 	            <div>

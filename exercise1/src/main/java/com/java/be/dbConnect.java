@@ -17,7 +17,7 @@ public class dbConnect {
 		String user = "sa";
 		String password = "123456";
 		Connection con = DriverManager.getConnection(url, user, password);
-		System.out.println("connected!");
+		System.out.println("\nConnected!");
 		return con;
 	}
 }

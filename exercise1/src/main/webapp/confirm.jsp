@@ -18,11 +18,12 @@
     <div class="mt-2 p-5 bg-secondary text-white rounded">
 
         <h1>Confirmation</h1>
-        <p>Hello Mr.${user.lastName}</p>
-        <p>${user.firstName}</p>
+        <p>Hello Mr.${user.lastName} ${user.firstName}</p>
         <p>${user.doB}</p>
         <p>${user.poB}</p>
         <p>${user.sex}</p>
+        <p>Your id: ${idUser}</p>
+        
         
         <div>
         	<input type="button" class="btn btn-light" value="edit" onclick="location.href='edit.jsp'">
