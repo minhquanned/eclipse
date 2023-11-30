@@ -32,7 +32,7 @@ public class editUserServlet extends HttpServlet {
             // Connect to database
             Connection c = dbConnect.initializeDatabase();
             
-         // Get idUser
+            // Get idUser
             Statement stm = c.createStatement();
             ResultSet rs = stm.executeQuery("select top 1 idUser from [USER] order by idUser desc");
             int idUser = 0;
@@ -45,7 +45,6 @@ public class editUserServlet extends HttpServlet {
             String sql = "update [USER] set firstName=?, lastName=?, doB=?, poB=?, sex=? where idUser=?";
             PreparedStatement pstm = c.prepareStatement(sql);
             
-            
             pstm.setString(1, fName);
             pstm.setString(2, lName);
             pstm.setString(3, DoB);
@@ -53,7 +52,7 @@ public class editUserServlet extends HttpServlet {
             pstm.setString(5, Sex);
             pstm.setInt(6, idUser);
 
-            pstm.executeUpdate();    
+            pstm.executeUpdate();
             pstm.close();
             c.close();
             
@@ -62,7 +61,6 @@ public class editUserServlet extends HttpServlet {
             session.setAttribute("idUser", idUser);
             String url = "/confirm.jsp";
             getServletContext().getRequestDispatcher(url).forward(req, res);
-            
 
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block

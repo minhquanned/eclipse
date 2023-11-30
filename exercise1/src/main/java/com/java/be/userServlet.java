@@ -56,9 +56,9 @@ public class userServlet extends HttpServlet {
             pstm.close();
             c.close();
             
-            HttpSession seassion = req.getSession();
-            seassion.setAttribute("user", user);
-            seassion.setAttribute("idUser", idUser);
+            HttpSession session = req.getSession();
+            session.setAttribute("user", user);
+            session.setAttribute("idUser", idUser);
             String url = "/confirm.jsp";
             getServletContext().getRequestDispatcher(url).forward(req, res);
 

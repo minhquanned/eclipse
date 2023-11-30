@@ -38,7 +38,7 @@
 	                
 	            <div>
 	                <label>Place of Birth:</label>
-	                <select class="form-select" name="PoB" id="PoB" selected="${user.poB }" >
+	                <select class="form-select" name="PoB" id="PoB" >
 	                    <option value="DN">Đà Nẵng</option>
 	                    <option value="QN">Quảng Nam</option>
 	                    <option value="QT">Quảng Trị</option>
@@ -55,7 +55,7 @@
 	                    <label for="Female">Female</label>
 	                    <input type="radio" id="Other" name="Sex" value="Other">
 	                    <label for="Other">Other</label><br>
-	                <p class="text-danger">*Remember to check again your gender</p>
+	                <p class="">*Remember to check again your gender and your place of birth</p>
 	            </div>
 	                
 	            <div>

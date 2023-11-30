@@ -36,7 +36,6 @@
         <p>${user.sex}</p>
         <p>Your id: ${idUser}</p>
         
-        
         <div>
         	<input type="button" class="btn btn-light" value="Edit" onclick="location.href='edit.jsp'">
         </div>
